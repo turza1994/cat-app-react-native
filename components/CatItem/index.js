@@ -31,7 +31,7 @@ const CarItem = (props) => {
 
       <View style={styles.buttonsContainer}>
         <Button 
-          title= "Cat Details"
+          title= "More Details"
           onPress={() => {
             navigation.push('CatDetails', props.car )
           }}

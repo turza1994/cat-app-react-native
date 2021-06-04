@@ -19,7 +19,7 @@ const CatsList = (props) => {
     <View style={styles.container}>
       <FlatList
         data={cars}
-        renderItem={({item}) => <CatItem car={item} />}
+        renderItem={({item}) => <CatItem car={item} navigation={props.navigation} />}
         showsVerticalScrollIndicator={false}
         snapToAlignment={'start'}
         decelerationRate={'fast'}

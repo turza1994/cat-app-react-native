@@ -3,15 +3,27 @@ import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import CatsList from './components/CatsList';
 // import Header from './components/Header';
+import { createAppContainer } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
+import CatDetails from './components/CatDetails';
 
-export default function App() {
+function App(props) {
   return (
     <View style={styles.container}>
-      <CatsList />
+      <CatsList navigation={props.navigation} />
       <StatusBar style="auto" />
     </View>
   );
 }
+
+const appNavigator = createStackNavigator({
+  Home: {
+    screen: App,
+  },
+  CatDetails: {
+    screen: CatDetails,
+  }
+})
 
 const styles = StyleSheet.create({
   container: {
@@ -21,3 +33,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+export default createAppContainer(appNavigator)

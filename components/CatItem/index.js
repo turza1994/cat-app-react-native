@@ -1,16 +1,20 @@
 import React from 'react';
-import {View, Text, ImageBackground} from 'react-native';
+import {View, Text, ImageBackground, Button} from 'react-native';
+// import { useNavigation } from 'react-navigation';
 // import StyledButton from "../StyledButton";
 import styles from './styles';
 
 const CarItem = (props) => {
 
   const { name, origin, temperament, image } = props.car;
-  if(!image) return null;
+  const { navigation } = props;
+  // if(!image) return null;
+  // const navigation = useNavigation()
+
   return (
     <View style={styles.carContainer}>
       <ImageBackground
-        source={image.url}
+        source={{uri: image?.url}}
         style={styles.image}
       />
 
@@ -24,6 +28,16 @@ const CarItem = (props) => {
           </Text>
         </Text>
       </View>
+
+      <View style={styles.buttonsContainer}>
+        <Button 
+          title= "Cat Details"
+          onPress={() => {
+            navigation.push('CatDetails', props.car )
+          }}
+        />
+      </View>
+      
 
       {/* <View style={styles.buttonsContainer}>
         <StyledButton

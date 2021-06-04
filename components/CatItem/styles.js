@@ -9,6 +9,7 @@ const styles = StyleSheet.create({
     marginTop: '30%',
     width: '100%',
     alignItems: 'center',
+    backgroundColor: 'rgba(255,255,255, 0.5)'
   },
   title: {
     fontSize: 40,
@@ -32,9 +33,10 @@ const styles = StyleSheet.create({
 
   buttonsContainer: {
     position: 'absolute',
-    bottom: 50,
+    bottom: 120,
     width: '100%',
   }
+
 });
 
 export default styles;

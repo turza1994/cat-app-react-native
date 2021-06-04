@@ -1,11 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
+import CatsList from './components/CatsList';
+// import Header from './components/Header';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Cat App</Text>
+      <CatsList />
       <StatusBar style="auto" />
     </View>
   );

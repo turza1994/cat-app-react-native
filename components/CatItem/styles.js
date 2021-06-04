@@ -6,10 +6,11 @@ const styles = StyleSheet.create({
     height: Dimensions.get('window').height,
   },
   titles: {
-    marginTop: '30%',
+    marginTop: '80%',
     width: '100%',
     alignItems: 'center',
-    backgroundColor: 'rgba(255,255,255, 0.5)'
+    backgroundColor: 'rgba(255,255,255, 0.5)',
+    padding: '5%',
   },
   title: {
     fontSize: 40,
@@ -33,7 +34,7 @@ const styles = StyleSheet.create({
 
   buttonsContainer: {
     position: 'absolute',
-    bottom: 120,
+    bottom: 15,
     width: '100%',
   }
 

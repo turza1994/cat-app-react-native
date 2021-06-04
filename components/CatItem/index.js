@@ -5,22 +5,22 @@ import styles from './styles';
 
 const CarItem = (props) => {
 
-  const { name, tagline, taglineCTA, image } = props.car;
-
+  const { name, origin, temperament, image } = props.car;
+  if(!image) return null;
   return (
     <View style={styles.carContainer}>
       <ImageBackground
-        source={image}
+        source={image.url}
         style={styles.image}
       />
 
       <View style={styles.titles}>
         <Text style={styles.title}>{name}</Text>
         <Text style={styles.subtitle}>
-          {tagline}
-          {' '}
+          Origin: {origin}
+          {'\n'}
           <Text style={styles.subtitleCTA}>
-            {taglineCTA}
+          Temperament: {temperament}
           </Text>
         </Text>
       </View>
